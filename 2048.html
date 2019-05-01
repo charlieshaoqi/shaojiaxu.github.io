@@ -91,17 +91,17 @@ history.back();
 
 
 
-<meta name="description" content="2048   	 		 			Highest Score:  			2048 			PC端请使用“← ↑ → ↓“方向键移动方块 			New Game 			Score:0 		 		 			 			 			 			 			 			 			 			 			 			 			 			 			 			 			 			 		 	              var scree">
+<meta name="description" content="2048              *{             padding: 0;             margin: 0;         }     .page h1{         text-align: center;     }     .intro{         text-align: center;     }     .score_">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tony的小站">
-<meta property="og:url" content="http://yoursite.com/2048/2048.html">
+<meta property="og:url" content="http://yoursite.com/2048.html">
 <meta property="og:site_name" content="Tony的小站">
-<meta property="og:description" content="2048   	 		 			Highest Score:  			2048 			PC端请使用“← ↑ → ↓“方向键移动方块 			New Game 			Score:0 		 		 			 			 			 			 			 			 			 			 			 			 			 			 			 			 			 			 		 	              var scree">
+<meta property="og:description" content="2048              *{             padding: 0;             margin: 0;         }     .page h1{         text-align: center;     }     .intro{         text-align: center;     }     .score_">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-01T01:45:43.000Z">
+<meta property="og:updated_time" content="2019-05-01T03:20:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tony的小站">
-<meta name="twitter:description" content="2048   	 		 			Highest Score:  			2048 			PC端请使用“← ↑ → ↓“方向键移动方块 			New Game 			Score:0 		 		 			 			 			 			 			 			 			 			 			 			 			 			 			 			 			 			 		 	              var scree">
+<meta name="twitter:description" content="2048              *{             padding: 0;             margin: 0;         }     .page h1{         text-align: center;     }     .intro{         text-align: center;     }     .score_">
 
 
 
@@ -131,7 +131,7 @@ history.back();
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2048/2048.html"/>
+  <link rel="canonical" href="http://yoursite.com/2048.html"/>
 
 
 
@@ -262,11 +262,11 @@ history.back();
       
         
         <li class="menu-item menu-item-game">
-          <a href="/2048/2048.html" rel="section">
+          <a href="/2048.html" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-gamepad"></i> <br />
             
-            game
+            小游戏
           </a>
         </li>
       
@@ -346,40 +346,69 @@ history.back();
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="main.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>	
-	<script type="text/javascript" src="main.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>    
 	<title>2048</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    .page h1{
+        text-align: center;
+    }
+    .intro{
+        text-align: center;
+    }
+    .score_container{
+        font-size: 24px;
+        text-align: center;
+        font-weight: 1000;
+    }
+    .highestScore{
+        color:#d71939;
+        font-weight: 1000;
+    }
+    #score{
+        color: #d5455d;
+    }
+    .btn{
+        display: inline-block;
+        padding: 10px;
+        background: #82ba08;
+        font-size: 16px;
+        border-radius: 10px;
+        color: #fff;
+        margin: 10px 0;
+    }
+    .grid_container{
+        background: #6a934e;
+        position: relative;
+        margin: 0 auto;
+        box-sizing:border-box;
+        border-radius: 10px;
+        
+    }
+    .grid{
+        background: #47ac71;
+        border-radius: 6px;
+        position: absolute;
+    }
+    .number{
+        background: #0fe76b;
+        border-radius: 6px;
+        position: absolute;
+        font-family: Arial;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+    }
+    .score_container h1{
+        color: #38b0f5
+    }
+</style>
 </head>
 <body>
-	<div class="page">
-		<div class="score_container">
-			<p class="highestScore">Highest Score: <span id="highestScore"></span></p>
-			<h1>2048</h1>
-			<p id="intro">PC端请使用“← ↑ → ↓“方向键移动方块</p>
-			<div><span class="btn" id="newgame">New Game</span></div>
-			<p>Score:<span id="score">0</span></p>
-		</div>
-		<div class="grid_container">
-			<div class="grid" id="grid_0_0"></div>
-			<div class="grid" id="grid_0_1"></div>
-			<div class="grid" id="grid_0_2"></div>
-			<div class="grid" id="grid_0_3"></div>
-			<div class="grid" id="grid_1_0"></div>
-			<div class="grid" id="grid_1_1"></div>
-			<div class="grid" id="grid_1_2"></div>
-			<div class="grid" id="grid_1_3"></div>
-			<div class="grid" id="grid_2_0"></div>
-			<div class="grid" id="grid_2_1"></div>
-			<div class="grid" id="grid_2_2"></div>
-			<div class="grid" id="grid_2_3"></div>
-			<div class="grid" id="grid_3_0"></div>
-			<div class="grid" id="grid_3_1"></div>
-			<div class="grid" id="grid_3_2"></div>
-			<div class="grid" id="grid_3_3"></div>
-		</div>
-	</div>
     <script>
         var screenWidth,
         screenHight,
@@ -882,6 +911,33 @@ history.back();
         $("#highestScore").text(localStorage.getItem("highestScore"));
     }
     </script>
+	<div class="page">
+		<div class="score_container">
+			<p class="highestScore">Highest Score: <span id="highestScore"></span></p>
+			<h1>2048</h1>
+			<p id="intro">PC端请使用“← ↑ → ↓“方向键移动方块</p>
+			<div><span class="btn" id="newgame">New Game</span></div>
+			<p>Score:<span id="score">0</span></p>
+		</div>
+		<div class="grid_container">
+			<div class="grid" id="grid_0_0"></div>
+			<div class="grid" id="grid_0_1"></div>
+			<div class="grid" id="grid_0_2"></div>
+			<div class="grid" id="grid_0_3"></div>
+			<div class="grid" id="grid_1_0"></div>
+			<div class="grid" id="grid_1_1"></div>
+			<div class="grid" id="grid_1_2"></div>
+			<div class="grid" id="grid_1_3"></div>
+			<div class="grid" id="grid_2_0"></div>
+			<div class="grid" id="grid_2_1"></div>
+			<div class="grid" id="grid_2_2"></div>
+			<div class="grid" id="grid_2_3"></div>
+			<div class="grid" id="grid_3_0"></div>
+			<div class="grid" id="grid_3_1"></div>
+			<div class="grid" id="grid_3_2"></div>
+			<div class="grid" id="grid_3_3"></div>
+		</div>
+	</div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
 
@@ -1248,8 +1304,8 @@ history.back();
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2048/2048.html';
-          this.page.identifier = '2048/2048.html';
+          this.page.url = 'http://yoursite.com/2048.html';
+          this.page.identifier = '2048.html';
           this.page.title = '';
         };
         var d = document, s = d.createElement('script');
