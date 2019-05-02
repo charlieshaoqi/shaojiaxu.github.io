@@ -57,6 +57,44 @@ history.back();
 
 
 
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
@@ -65,26 +103,32 @@ history.back();
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
 
 
 
+  <meta name="keywords" content="有料,前端,hexo" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Tony的小站" type="application/atom+xml" />
 
 
 
@@ -94,7 +138,7 @@ history.back();
 <meta name="description" content="L2Dwidget.init({&quot;log&quot;:false,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;tagMode&quot;:false});">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tony的小站">
-<meta property="og:url" content="http://yoursite.com/404.html">
+<meta property="og:url" content="https://shaojiaxu.github.io/404.html">
 <meta property="og:site_name" content="Tony的小站">
 <meta property="og:description" content="L2Dwidget.init({&quot;log&quot;:false,&quot;pluginJsPath&quot;:&quot;lib/&quot;,&quot;pluginModelPath&quot;:&quot;assets/&quot;,&quot;pluginRootPath&quot;:&quot;live2dw/&quot;,&quot;tagMode&quot;:false});">
 <meta property="og:locale" content="zh-Hans">
@@ -131,7 +175,7 @@ history.back();
 
 
 
-  <link rel="canonical" href="http://yoursite.com/404.html"/>
+  <link rel="canonical" href="https://shaojiaxu.github.io/404.html"/>
 
 
 
@@ -461,6 +505,13 @@ history.back();
           </nav>
 
           
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
 
           
             <div class="links-of-author motion-element">
@@ -501,10 +552,37 @@ history.back();
                   </li>
                 
               </ul>
+          <div id="days"></div>
+<script>
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("04/01/2019 15:13:14");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+
             </div>
           
 
-          
 
         </div>
       </section>
@@ -599,14 +677,13 @@ history.back();
   
 
 
-
-
-
-
-
-
   
-  
+
+
+
+
+
+
 
 
 
@@ -644,12 +721,7 @@ history.back();
 
   
   
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -697,7 +769,7 @@ history.back();
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/404.html';
+          this.page.url = 'https://shaojiaxu.github.io/404.html';
           this.page.identifier = '404.html';
           this.page.title = '';
         };
