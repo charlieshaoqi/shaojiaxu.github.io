@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://shaojiaxu.github.io/"/>
-  <updated>2019-05-02T23:59:12.000Z</updated>
+  <updated>2019-05-05T12:41:08.000Z</updated>
   <id>https://shaojiaxu.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://shaojiaxu.github.io/2019/04/27/%E7%A9%BF%E8%B6%8A%E9%AB%98%E5%A2%99%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     <id>https://shaojiaxu.github.io/2019/04/27/穿越高墙看世界/</id>
     <published>2019-04-27T13:13:10.000Z</published>
-    <updated>2019-05-02T23:59:12.000Z</updated>
+    <updated>2019-05-05T12:41:08.000Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote class="blockquote-center"><h2 class="about-title">少壮不努力，一生在内地</h2></blockquote><p></p><p class="about-text"><br>不管我们肉身何处，心，总是向往自由的。<br></p><br><a id="more"></a><p></p><p></p><p class="about-text"><br>不用 Google 又不是不能活。不上网又不是不能活。不用电脑又不是不能活。不用手机又不是不能活。不看电视又不是不能活。不住楼房又不是不能活。不穿衣服又不是不能活。不会说话又不是不能活。认为 GFW 无所谓的人，只配过原始人的生活。<br></p><p></p><p></p><p class="about-text"><br>限购房子，限购车子，限制互联网，一个个活得诚惶诚恐，这个国家，什么都限制，唯独不限制政府的权力。事实是，真正有钱有权的人可以养很多的房子，很多的车，而穷人的孩子，眼巴巴看着美好生活，一步一步地却总也跟不上。<br></p><p></p><p></p><p class="about-text"><br>对普罗大众封锁谷歌等“普世”产品，但砌墙者的电脑却有6个VPN，新华社、央视、环球等却在推特上进行所谓“大外宣”，或是在雁栖湖、乌镇设立互联网特区。这些个特权并不新鲜。小礼堂的情色电影，书架上的《金瓶梅》，你若是高干，就是在文革里，也能实现。<br></p><p></p><div class="note info"><p>内容引自 <a href="https://teddysun.com" class="btn-get-started" target="_blank" rel="noopener">秋水逸冰</a><a href="https://teddysun.com/390.html" class="btn-get-started" target="_blank" rel="noopener">查看原文</a></p><p></p></div><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
