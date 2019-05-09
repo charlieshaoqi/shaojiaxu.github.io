@@ -140,17 +140,17 @@ history.back();
 
 
 
-<meta name="description" content="在本站评论需挂V少壮不努力，一生在内地不管我们肉身何处，心，总是向往自由的。">
+<meta name="description" content="少壮不努力，一生在内地不管我们肉身何处，心，总是向往自由的。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于">
 <meta property="og:url" content="https://shaojiaxu.github.io/about/index.html">
 <meta property="og:site_name" content="Tony的小站">
-<meta property="og:description" content="在本站评论需挂V少壮不努力，一生在内地不管我们肉身何处，心，总是向往自由的。">
+<meta property="og:description" content="少壮不努力，一生在内地不管我们肉身何处，心，总是向往自由的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-02T23:55:50.000Z">
+<meta property="og:updated_time" content="2019-05-09T12:01:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="在本站评论需挂V少壮不努力，一生在内地不管我们肉身何处，心，总是向往自由的。">
+<meta name="twitter:description" content="少壮不努力，一生在内地不管我们肉身何处，心，总是向往自由的。">
 
 
 
@@ -369,8 +369,9 @@ history.back();
       <div class="post-body">
         
         
-          <p class="about-text"><br>在本站评论需挂V<br></p><br><h2 class="about-title">少壮不努力，一生在内地</h2><br><blockquote class="blockquote-center"><p>不管我们肉身何处，心，总是向往自由的。</p>
-</blockquote><br><a id="more"></a><br><p class="about-text"><br>不用 Google 又不是不能活。不上网又不是不能活。不用电脑又不是不能活。不用手机又不是不能活。不看电视又不是不能活。不住楼房又不是不能活。不穿衣服又不是不能活。不会说话又不是不能活。认为 GFW 无所谓的人，只配过原始人的生活。<br></p>
+          <p></p><h2 class="about-title">少壮不努力，一生在内地</h2><br><blockquote class="blockquote-center"><p>不管我们肉身何处，心，总是向往自由的。</p>
+</blockquote><br><a id="more"></a><p></p>
+<p class="about-text"><br>不用 Google 又不是不能活。不上网又不是不能活。不用电脑又不是不能活。不用手机又不是不能活。不看电视又不是不能活。不住楼房又不是不能活。不穿衣服又不是不能活。不会说话又不是不能活。认为 GFW 无所谓的人，只配过原始人的生活。<br></p>
 
 <p class="about-text"><br>限购房子，限购车子，限制互联网，一个个活得诚惶诚恐，这个国家，什么都限制，唯独不限制政府的权力。事实是，真正有钱有权的人可以养很多的房子，很多的车，而穷人的孩子，眼巴巴看着美好生活，一步一步地却总也跟不上。<br></p>
 
@@ -634,7 +635,7 @@ show_date_time();
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.1k字</span>
+  <span class="post-count">博客全站共2k字</span>
 </div>
 
         
@@ -1125,6 +1126,113 @@ show_date_time();
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("syjmfDomUYqiTDDzIdJV5oEz-gzGzoHsz", "A95ri84Lo5ecPEvXjhiwE3pt");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
