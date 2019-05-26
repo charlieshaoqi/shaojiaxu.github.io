@@ -2034,7 +2034,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #50ff4e;
+  background: #2a5dc9;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3376,7 +3376,7 @@ pre .javascript .function {
   margin-top: 0px;
 }
 .site-meta {
-  background: url("https://cdn.yangbingdong.com/img/header/header_background.jpg");
+  background: url("https://i.loli.net/2019/05/26/5cea54dd3be3c29909.jpg");
 }
 .site-title {
   font-size: 40px;
@@ -3385,9 +3385,6 @@ pre .javascript .function {
 .site-subtitle {
   font-size: 15px;
   color: #fff;
-}
-.brand {
-  background: transparent;
 }
 .menu {
   text-align: center;
@@ -3486,22 +3483,6 @@ pre .javascript .function {
 }
 hr {
   margin: 10px 0px 30px 0px;
-}
-.post-body h2,
-h3,
-h4,
-h5,
-h6 {
-  border-left: 4px solid #657b83;
-  padding-left: 10px;
-}
-.post-body h1 {
-  border-left: 1px solid #657b83;
-  padding-left: 1px;
-}
-body {
-  color: #444;
-  font-size: 16px;
 }
 .posts-expand .post-body img {
   border: none;
